@@ -1,0 +1,17 @@
+{
+  "name": "necem2023",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.43.6",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "qrious": "^4.0.2",
+    "slidev-theme-meetup": "^1.5.3",
+    "vite-svg-loader": "^4.0.0"
+  }
+}
