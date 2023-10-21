@@ -79,6 +79,8 @@ html.dark {
 }
 
 .slidev-layout {
+  @apply px-3.5;
+  @apply py-2.0;
   font-variant-ligatures: none;
   text-align: justify;
 
@@ -171,4 +173,9 @@ html.dark {
 :not(li) > ul > li:not(li:first-child),
 :not(li) > ol > li:not(li:first-child) {
   margin-top: 1rem;
+}
+
+p.cite {
+  @apply text-sm;
+  @apply text-right;
 }
