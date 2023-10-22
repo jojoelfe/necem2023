@@ -177,5 +177,5 @@ html.dark {
 
 p.cite {
   @apply text-sm;
-  @apply text-right;
+  
 }

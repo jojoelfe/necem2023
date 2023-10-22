@@ -46,7 +46,7 @@ layout: twocols
 
 <img src="/cryoet.png" class="mx-auto h-32 rounded-md shadow-lg" />
 
-<p class="cite"><a class="cite" href="https://doi.org/10.1038/s41586-022-05255-2" >Xue, L., et al. Nature 610, 205–211 (2022)</a></p>
+<p class="cite text-right"><a class="cite" href="https://doi.org/10.1038/s41586-022-05255-2" >Xue, L., et al. Nature 610, 205–211 (2022)</a></p>
 
 <h3 class="text-center">2D Template Matching</h3>
 
@@ -61,7 +61,7 @@ $]$
 </p>
 
 <img src="/2dtm_mip.png" class="mx-auto h-24 rounded-md shadow-lg" />
-<p class="cite"><a class="cite" href="https://doi.org/10.7554/eLife.25648" >Rickgauer, J.P., et al. eLife 6:e25648 (2017)
+<p class="cite text-right"><a class="cite" href="https://doi.org/10.7554/eLife.25648" >Rickgauer, J.P., et al. eLife 6:e25648 (2017)
 </a></p>
 <!-- /nrs/elferich/bern_backup/ER_HoxB8_96h/Assets/Images/Scaled/CF4-g1_00165_-20.0_165 -->
 <!-- - Solve structures in thei native environment
@@ -83,6 +83,9 @@ $]$
 - Approach: Image everything as fast as possible
 -->
 
+::bottom::
+<p class="cite"><a class="cite" href=" https://doi.org/10.7554/eLife.80980" >Elferich, J., et al. eLife 11:e80980 (2022)
+</a></p>
 
 ---
 layout: twocols
@@ -99,13 +102,13 @@ clicks: 3
 
 <img src="/lamella_setup.png" class="rounded-md shadow-lg absolute" v-click="[1, 2]"/>
 
-<img src="/lamella_exposures.png" class="rounded-md shadow-lg absolute" v-click="[2, 3]"/>
+<img src="/lamella_exposures.png" class="rounded-md shadow-lg" v-click="[2, 3]"/>
 
----
 
-# cisTEM Preprocessing - Motion correction
 
-- crop out the beam edges
+::bottom::
+
+ <a href="https://github.com/jojoelfe/decolace"><logos-github-icon />jojoelfe/decolace</a>
 
 ---
 layout: twocols
@@ -120,6 +123,15 @@ layout: twocols
 ::right::
 
 <img src="/ctffind5.png" class="rounded-md shadow-lg"/>
+
+::bottom::
+
+ <a href="https://github.com/GrigorieffLab/cisTEM/tree/je_ctffind_added_to_combined"><logos-github-icon />GrigorieffLab/cisTEM/tree/ctffind5</a>
+
+
+---
+
+# Running 2D Template Matching
 
 ---
 layout: twocols
@@ -149,9 +161,20 @@ result = unblur.run(par)
 
 ::right::
 
+::bottom::
+
+ <a href="https://github.com/jojoelfe/pycistem"><logos-github-icon />jojoelfe/pycistem</a>
+
 ---
 
-# Drug treatment of human leukemia cell line
+# Data collected 
+
+|         | Control           | 24h brequinar  | 48h brequinar | **Total** |
+| ------------- |-------------:| -----:| ---:| ---:|
+| # Lamellae      | 35 | 15 | 31| 81 | 
+| # Micrograph      | 15,612  | 6,423 | 14,008 | 36,043 |
+| # 60S Matches | 210,780      | 71,469 | 108,108 | 390,357 |
+| 60S Matches / micrograph | 13.5 | 11.1 | 7.7 | 10.8 |
 
 --- 
 
@@ -159,6 +182,10 @@ result = unblur.run(par)
 
 <!-- Animation ??-->
 
+::bottom::
+
+<a href="https://github.com/BradyAJohnston/MolecularNodes/"><logos-github-icon /> BradyAJohnston/MolecularNodes</a>
+<a href="https://github.com/jojoelfe/MolecularNodes/"><logos-github-icon /> jojoelfe/MolecularNodes</a>
 ---
 
 # Molecular localization - Visualize using Blender

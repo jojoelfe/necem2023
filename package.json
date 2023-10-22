@@ -13,5 +13,8 @@
     "qrious": "^4.0.2",
     "slidev-theme-meetup": "^1.5.3",
     "vite-svg-loader": "^4.0.0"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.1.37"
   }
 }
