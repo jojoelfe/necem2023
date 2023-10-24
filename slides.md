@@ -245,9 +245,33 @@ clicks:2
 
 # cisTEM - Convert to a single-particle project
 
+::middle::
+
+<img src="/cistem_refinement.png" class="rounded-md shadow-lg h-112 mx-auto" />
 ---
 
-# cisTEM - Reconstruction and Template Bias
+# cisTEM - Reconstructed Matches
+
+::middle::
+
+<img src="/cistem_reconstruct3d.png" class="rounded-md shadow-lg h-92 mx-auto" />
+<img src="/overall_locres_clipped.png" class="h-92 mx-auto" />
+
+---
+
+# cisTEM - Template Bias?
+
+::left::
+
+<SlidevVideo autoPlay="resume"  loop muted  class="rounded-md shadow-lg h-96 mx-auto ">
+  <source src="/error1.mp4" type="video/mp4">
+</SlidevVideo>
+
+::right::
+
+<SlidevVideo autoPlay="resume" loop muted  class="rounded-md shadow-lg h-96 mx-auto" >
+  <source src="/error2.mp4" type="video/mp4">
+</SlidevVideo>
 
 ---
 layout: twocols
@@ -267,7 +291,9 @@ layout: twocols
 
 # Does the drug affect the elongation cycle?
 
-<img src="/class_perc.png" class="h-96"/>
+::middle::
+
+<img src="/class_perc.png" class=" h-112 mx-auto" />
 
 ---
 layout: twocols
@@ -291,6 +317,8 @@ layout: twocols
 
 ::left::
 
+<h3> Brequinar treatment </h3>
+
 <div class="grid grid-cols-2 gap-4">
 
 <img src="/render001.png" class="rounded-md shadow-lg" />
@@ -298,6 +326,19 @@ layout: twocols
 <img src="/render004.png" class="rounded-md shadow-lg" />
 <img src="/render003.png" class="rounded-md shadow-lg" />
 </div>
+
+::right::
+
+<h3> Control </h3>
+
+<div class="grid grid-cols-2 gap-4">
+
+<img src="/crender001.png" class="rounded-md shadow-lg" />
+<img src="/crender002.png" class="rounded-md shadow-lg" />
+<img src="/crender003.png" class="rounded-md shadow-lg" />
+<img src="/crender004.png" class="rounded-md shadow-lg" />
+</div>
+
 
 ---
 
