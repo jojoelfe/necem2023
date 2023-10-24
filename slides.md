@@ -353,19 +353,27 @@ layout: twocols
 
 ::left::
 
+<div>
 <p class="pi">Niko Grigorieff</p>
 <p>Bronwyn Lucas</p>
 <p>Ben Himes</p>
-<p>Lingli</p>
+<p>Lingli Kong</p>
 <p>Steve Diggs</p>
-<p>Kexin</p>
+<p>Kexin Zhang</p>
+<p>Ximena Zottig</p>
 <p class="pi">Tim Grant</p>
 <p class="pi">David Sykes</p>
 <p>Jelena Milosevic</p>
 <p class="pi">UMass Medical School Cryo-EM core:</p>
 <p>Chen Xu</p>
 <p>Kangkang Song</p>
+</div>
+::right::
 
+<div>
+<img src="/qr-code.png" />
+<a href="https://jojoelfe.github.io/necem2023" class="text-center"><logos-github-icon /> jojoelfe.github.io/necem2023</a>
+</div>
 
 <style>
   .slidev-layout p {
