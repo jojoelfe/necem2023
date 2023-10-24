@@ -76,27 +76,29 @@ $]$
 
 # Defocus Corrected Large-Area Cryo-EM (DeCo-LACE)
 
-<img src="/init.png" class="inline h-100 rounded-md shadow-lg mx-2" />
-<img src="/approach.png" class="inline h-100 rounded-md shadow-lg mx-2" />
+::middle::
+
+<img src="/init.png" class="inline h-90 rounded-md shadow-lg mx-2" />
+<img src="/approach.png" class="inline h-90 rounded-md shadow-lg mx-2" />
+<img src="/deco_result.jpg" class="inline h-90 rounded-md shadow-lg mx-2" />
+
 <!-- - Lamellae preparation is slow (Do not waste area)
 - Hard to know where rare events are from overview (CLEM)
 - Approach: Image everything as fast as possible
 -->
 
 ::bottom::
+
 <p class="cite"><a class="cite" href=" https://doi.org/10.7554/eLife.80980" >Elferich, J., et al. eLife 11:e80980 (2022)
 </a></p>
 
 ---
-layout: twocols
-clicks: 3
+clicks: 2
 ---
 
 # Data acquisition using DeCo-LACE
 
 ::left::
-
-::right::
 
 <img src="/lamella.png" class="rounded-md shadow-lg absolute" v-click="[0, 1]" />
 
@@ -104,14 +106,15 @@ clicks: 3
 
 <img src="/lamella_exposures.png" class="rounded-md shadow-lg" v-click="[2, 3]"/>
 
+::right::
 
+<img src="/Figure_1.svg" />
 
 ::bottom::
 
- <a href="https://github.com/jojoelfe/decolace"><logos-github-icon />jojoelfe/decolace</a>
+ <a href="https://github.com/jojoelfe/decolace"><logos-github-icon /> jojoelfe/decolace</a>
 
 ---
-layout: twocols
 ---
 
 # cisTEM Preprocessing - CTFfind
@@ -126,12 +129,25 @@ layout: twocols
 
 ::bottom::
 
- <a href="https://github.com/GrigorieffLab/cisTEM/tree/je_ctffind_added_to_combined"><logos-github-icon />GrigorieffLab/cisTEM/tree/ctffind5</a>
+ <a href="https://github.com/GrigorieffLab/cisTEM/tree/je_ctffind_added_to_combined"><logos-github-icon /> GrigorieffLab/cisTEM/tree/ctffind5</a>
 
 
 ---
 
 # Running 2D Template Matching
+
+::middle::
+
+<img src="/mt_start.png" class="rounded-md shadow-lg h-112 mx-auto" />
+
+
+---
+
+# Running 2D Template Matching
+
+::middle::
+
+<img src="/mt_result.png" class="rounded-md shadow-lg h-112 mx-auto" />
 
 ---
 layout: twocols
@@ -160,10 +176,23 @@ result = unblur.run(par)
 </WindowConsole>
 
 ::right::
+<WindowConsole class="rounded-lg shadow-lg object-cover z-10 text-sm">
+
+```bash
+> lace_proc import-session /data/elferich/CryoTEM/20230505 --pixel-size 0.53 --exp-per-frame 0.8
+
+> lace_proc run-unblur --num-cores 40 --cmd-prefix "srun"
+
+> lace_proc run-ctffind --num-cores 40 --cmd-prefix "srun"
+
+> lace_proc run-matchtemplate --template "7cpu_60S.mrc"
+```
+
+</WindowConsole>
 
 ::bottom::
 
- <a href="https://github.com/jojoelfe/pycistem"><logos-github-icon />jojoelfe/pycistem</a>
+ <a href="https://github.com/jojoelfe/pycistem"><logos-github-icon /> jojoelfe/pycistem</a>
 
 ---
 
@@ -176,11 +205,31 @@ result = unblur.run(par)
 | # 60S Matches | 210,780      | 71,469 | 108,108 | 390,357 |
 | 60S Matches / micrograph | 13.5 | 11.1 | 7.7 | 10.8 |
 
---- 
+---
+
+# Creating Template Matches Package
+
+::middle::
+
+<img src="/mt_package.png" class="rounded-md shadow-lg h-112 mx-auto" />
+
+---
+clicks:2
+---
 
 # Molecular localization - Visualize using Blender
 
-<!-- Animation ??-->
+::middle::
+
+<div class="mx-auto">
+<img src="/blender_start.png" class="rounded-md shadow-lg h-112 mx-auto absolute" v-click="[0, 1]" />
+<SlidevVideo autoPlay="resume" autoPause="click" autoReset="click" muted  class="rounded-md shadow-lg h-112" v-click="[1, 3]">
+  <source src="/blender_workflow.webm" type="video/webm">
+  Download the <a href="/flower.webm">WEBM</a>
+</SlidevVideo>
+</div>
+
+
 
 ::bottom::
 
@@ -190,7 +239,7 @@ result = unblur.run(par)
 
 # Molecular localization - Visualize using Blender
 
-<img src="/ribomitotubulerender.png" />
+<img src="/ribomitotubulerender.png" class="rounded-md shadow-lg h-112 mx-auto" />
 
 ---
 

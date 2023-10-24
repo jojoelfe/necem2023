@@ -14,7 +14,11 @@ const props = defineProps({
       class="top"
       :class="props.class"
     >
-      <slot />
+    <slot />
+    
+    </div>
+    <div class="middle" :class="props.class">
+      <slot name="middle" />
     </div>
     <div
       class="left"
@@ -54,10 +58,20 @@ const props = defineProps({
 
 .left {
   grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
 }
 
 .right {
   grid-area: 2 / 2 / 3 / 3;
+  display: flex;
+  align-items: center;
+}
+
+.middle {
+  grid-area: 2 / 1 / 3 / 3;
+  display: flex;
+  align-items: center;
 }
 
 .bottom {
