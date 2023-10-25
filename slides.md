@@ -59,8 +59,11 @@ $\cdot R_{\phi,\theta,\psi})\ast$
 $]$
 
 </p>
+<p class="text-center">
 
+$=$
 <img src="/2dtm_mip.png" class="mx-auto h-24 rounded-md shadow-lg" />
+</p>
 <p class="cite text-right"><a class="cite" href="https://doi.org/10.7554/eLife.25648" >Rickgauer, J.P., et al. eLife 6:e25648 (2017)
 </a></p>
 <!-- /nrs/elferich/bern_backup/ER_HoxB8_96h/Assets/Images/Scaled/CF4-g1_00165_-20.0_165 -->
