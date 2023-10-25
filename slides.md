@@ -217,20 +217,18 @@ result = unblur.run(par)
 <img src="/mt_package.png" class="rounded-md shadow-lg h-112 mx-auto" />
 
 ---
-clicks:2
+clicks:1
 ---
 
 # Molecular localization - Visualize using Blender
 
 ::middle::
 
-<div class="mx-auto">
-<img src="/blender_start.png" class="rounded-md shadow-lg h-112 mx-auto absolute" v-click="[0, 1]" />
-<SlidevVideo autoPlay="resume" autoPause="click" autoReset="click" muted  class="rounded-md shadow-lg h-112" v-click="[1, 3]">
-  <source src="/blender_workflow.webm" type="video/webm">
-  Download the <a href="/flower.webm">WEBM</a>
+
+<SlidevVideo autoPlay="resume" autoPause="click" autoReset="click" muted  class="rounded-md shadow-lg h-112 mx-auto" >
+  <source src="/blender_workflow2.mp4" type="video/mp4">
 </SlidevVideo>
-</div>
+
 
 
 
