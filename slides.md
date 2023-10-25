@@ -74,7 +74,24 @@ $=$
 - Tomography vs 2DTM
 - Data acquisition speed is crucial
 -->
+---
 
+# Brequinar as a treatment for AML
+
+::left::
+
+<img src="/cell_cover.jpg" class="mx-auto h-96 rounded-md shadow-lg" />
+
+
+::right::
+
+
+<img src="/g866.png" class="mx-auto h-32 rounded-md shadow-lg" />
+<img src="/g1655.png" class="mx-auto h-32 rounded-md shadow-lg" />
+
+::bottom::
+ <p class="cite"><a class="cite" href="https://doi.org/10.1016/j.cell.2016.08.057">Sykes D.B., et al. Cell 167(1) (2016)
+</a></p>
 ---
 
 # Defocus Corrected Large-Area Cryo-EM (DeCo-LACE)
@@ -118,6 +135,32 @@ clicks: 2
  <a href="https://github.com/jojoelfe/decolace"><logos-github-icon /> jojoelfe/decolace</a>
 
 ---
+
+# Data collected 
+
+::middle::
+
+<div class="px-10">
+
+|   |   |
+|---|---|
+| **Cells** | THP1 |
+| **Vitrification** | Plunge-freeze |
+| **Thinning** | TF Acquilos 2 to 150nm |
+| **TEM acquisition** | TF Krios 300keV |
+| **Pixel size** | 0.53 $\AA$ |
+| **Exposure** | 30 $\frac{e}{\AA^2}$ |
+
+</div>
+
+<div class="mx-5">
+
+|         | Control           | 24h brequinar  | 48h brequinar | **Total** |
+| ------------- |-------------:| -----:| ---:| ---:|
+| # Lamellae      | 35 | 15 | 31| 81 | 
+| # Micrographs      | 15,612  | 6,423 | 14,008 | 36,043 |
+
+</div>
 ---
 
 # cisTEM Preprocessing - CTFfind
@@ -201,12 +244,34 @@ result = unblur.run(par)
 
 # Data collected 
 
+::middle::
+
+<div class="px-10">
+
+|   |   |
+|---|---|
+| **Cells** | THP1 |
+| **Vitrification** | Plunge-freeze |
+| **Thinning** | TF Acquilos 2 to 150nm |
+| **TEM acquisition** | TF Krios 300keV |
+| **Pixel size** | 0.53 $\AA$ |
+| **Exposure** | 30 $\frac{e}{\AA^2}$ |
+| **2DTM pixel size** | 2 $\AA$ |
+| **2DTM angular sampling** | $2^\circ$ IP, $3^\circ$ OP |
+
+</div>
+
+<div class="mx-5">
+
 |         | Control           | 24h brequinar  | 48h brequinar | **Total** |
 | ------------- |-------------:| -----:| ---:| ---:|
 | # Lamellae      | 35 | 15 | 31| 81 | 
-| # Micrograph      | 15,612  | 6,423 | 14,008 | 36,043 |
+| # Micrographs      | 15,612  | 6,423 | 14,008 | 36,043 |
 | # 60S Matches | 210,780      | 71,469 | 108,108 | 390,357 |
 | 60S Matches / micrograph | 13.5 | 11.1 | 7.7 | 10.8 |
+
+</div>
+
 
 ---
 
@@ -289,26 +354,44 @@ layout: twocols
 <img src="/classes.gif" />
 
 ---
+clicks: 2
+---
 
 # Does the drug affect the elongation cycle?
 
 ::middle::
 
-<img src="/class_perc.png" class=" h-112 mx-auto" />
+<div class="mx-auto">
+<img src="/class1.png" class="absolute h-114" v-click="[0, 1]" />
+
+<img src="/class2.png" class="absolute h-114" v-click="[1, 2]"/>
+
+<img src="/class3.png" class="h-114" v-click="[2, 3]"/>
+</div>
 
 ---
-layout: twocols
+clicks:1
 ---
 
 # SERBP1 is bound to EF2 inactive class
 
-::left::
+::middle::
 
-<img src="/serbp1_helix.png" />
+<img src="/brown.jpg" class="rounded-md shadow-lg h-96 mx-auto" />
 
-::right::
+<div>
+<SlidevVideo  muted  class="rounded-md shadow-lg h-96 mx-auto absolute" v-click-hide>
+  <source src="/serbp1.mp4" type="video/mp4">
+</SlidevVideo>
 
-<img src="/serbp1_zoom.png" />
+<SlidevVideo autoPlay="resume" autoPause="click" autoReset="click" muted  class="rounded-md shadow-lg h-96 mx-auto" v-click-after >
+  <source src="/serbp1.mp4" type="video/mp4">
+</SlidevVideo>
+</div>
+::bottom::
+
+<p class="cite"><a class="cite" href="https://doi.org/10.7554/eLife.40486" >Brown, A., et al. eLife 7:e40486 (2018)</a></p>
+
 
 ---
 layout: twocols
@@ -343,9 +426,18 @@ layout: twocols
 
 ---
 
-# Future directions
+# Summary future directions
 
-- Analyze ribosome states in primary CD34+ precursors
+- Brequinar treatment changes ribosome levels, but does not appear to change the fraction of actively translating ribosomes
+- THP1 cells contain a surprisingly high fraction of translationally inactive ribosomes
+- Brequinar treatment appears to induce formation of ribosome-containing phagocytic structures
+
+<div class="mt-5" />
+
+# Future Directions
+
+- We are planning to compare these results to CD34+ cells isolated from human umbilical blood
+- We are working on developing approaches to test for statistically significant changes in spatial orientation of ribosomal states
 
 
 ---
