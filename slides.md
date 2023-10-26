@@ -74,23 +74,7 @@ $=$
 -->
 ---
 
-# Brequinar as a treatment for AML
 
-::left::
-
-<img src="/cell_cover.jpg" class="mx-auto h-96 rounded-md shadow-lg" />
-
-
-::right::
-
-
-<img src="/g866.png" class="mx-auto h-32 rounded-md shadow-lg" />
-<img src="/g1655.png" class="mx-auto h-32 rounded-md shadow-lg" />
-
-::bottom::
- <p class="cite"><a class="cite" href="https://doi.org/10.1016/j.cell.2016.08.057">Sykes D.B., et al. Cell 167(1) (2016)
-</a></p>
----
 
 # Defocus Corrected Large-Area Cryo-EM (DeCo-LACE)
 
@@ -132,33 +116,6 @@ clicks: 2
 
  <a href="https://github.com/jojoelfe/decolace"><logos-github-icon /> jojoelfe/decolace</a>
 
----
-
-# Data collected 
-
-::middle::
-
-<div class="px-10">
-
-|   |   |
-|---|---|
-| **Cells** | THP1 |
-| **Vitrification** | Plunge-freeze |
-| **Thinning** | TF Acquilos 2 to 150nm |
-| **TEM acquisition** | TF Krios 300keV |
-| **Pixel size** | 0.53 $\AA$ |
-| **Exposure** | 30 $\frac{e}{\AA^2}$ |
-
-</div>
-
-<div class="mx-5">
-
-|         | Control           | 24h brequinar  | 48h brequinar | **Total** |
-| ------------- |-------------:| -----:| ---:| ---:|
-| # Lamellae      | 35 | 15 | 31| 81 | 
-| # Micrographs      | 15,612  | 6,423 | 14,008 | 36,043 |
-
-</div>
 ---
 
 # cisTEM Preprocessing - CTFfind
@@ -238,6 +195,48 @@ result = unblur.run(par)
 
  <a href="https://github.com/jojoelfe/pycistem"><logos-github-icon /> jojoelfe/pycistem</a>
 
+
+---
+
+
+
+# Molecular localization - Visualize using Blender
+
+::middle::
+
+<div class="mx-auto">
+<img src="/vis_01.png" class="rounded-md shadow-lg h-112 mx-auto absolute"  />
+
+<img src="/vis_02.png" class="rounded-md shadow-lg h-112 mx-auto absolute" v-click/>
+<img src="/vis_03.png" class="rounded-md shadow-lg h-112 mx-auto absolute" v-click/>
+
+<img src="/vis_04.png" class="rounded-md shadow-lg h-112 mx-auto absolute" v-click/>
+<img src="/vis_04.png" class="rounded-md shadow-lg h-112 mx-auto" v-after/>
+
+</div>
+::bottom::
+
+<a href="https://github.com/BradyAJohnston/MolecularNodes/"><logos-github-icon /> BradyAJohnston/MolecularNodes</a>
+<a href="https://github.com/jojoelfe/MolecularNodes/" class="mx-2  "><logos-github-icon /> jojoelfe/MolecularNodes</a>
+---
+
+
+# Brequinar as a treatment for AML
+
+::left::
+
+<img src="/cell_cover.jpg" class="mx-auto h-96 rounded-md shadow-lg" />
+
+
+::right::
+
+
+<img src="/g866.png" class="mx-auto h-32 rounded-md shadow-lg" />
+<img src="/g1655.png" class="mx-auto h-32 rounded-md shadow-lg" />
+
+::bottom::
+ <p class="cite"><a class="cite" href="https://doi.org/10.1016/j.cell.2016.08.057">Sykes D.B., et al. Cell 167(1) (2016)
+</a></p>
 ---
 
 # Data collected 
@@ -270,56 +269,14 @@ result = unblur.run(par)
 
 </div>
 
-
----
-
-# Creating Template Matches Package
-
-::middle::
-
-<img src="/mt_package.png" class="rounded-md shadow-lg h-112 mx-auto" />
-
----
-clicks:1
----
-
-# Molecular localization - Visualize using Blender
-
-::middle::
-
-
-<SlidevVideo autoPlay="resume" autoPause="click" autoReset="click" muted  class="rounded-md shadow-lg h-112 mx-auto" >
-  <source src="/blender_workflow2.mp4" type="video/mp4">
-</SlidevVideo>
-
-
-
-
-::bottom::
-
-<a href="https://github.com/BradyAJohnston/MolecularNodes/"><logos-github-icon /> BradyAJohnston/MolecularNodes</a>
-<a href="https://github.com/jojoelfe/MolecularNodes/"><logos-github-icon /> jojoelfe/MolecularNodes</a>
----
-
-# Molecular localization - Visualize using Blender
-
-<img src="/ribomitotubulerender.png" class="rounded-md shadow-lg h-112 mx-auto" />
-
----
-
-# cisTEM - Convert to a single-particle project
-
-::middle::
-
-<img src="/cistem_refinement.png" class="rounded-md shadow-lg h-112 mx-auto" />
 ---
 
 # cisTEM - Reconstructed Matches
 
 ::middle::
 
-<img src="/cistem_reconstruct3d.png" class="rounded-md shadow-lg h-92 mx-auto" />
-<img src="/overall_locres_clipped.png" class="h-92 mx-auto" />
+<img src="/cistem_reconstruct3d.png" class="rounded-md shadow-lg h-80 mx-auto" />
+<img src="/overall_locres_clipped.png" class="h-80 mx-auto" />
 
 ---
 
@@ -349,13 +306,13 @@ layout: twocols
 
 ::right::
 
-<img src="/classes.gif" />
+<img src="/classes.gif" v-click />
 
 ---
 clicks: 2
 ---
 
-# Does the drug affect the elongation cycle?
+# Does brequinar affect the elongation cycle?
 
 ::middle::
 
