@@ -25,13 +25,12 @@ Johannes Elferich, Grigorieff Lab
 
 
 ---
-layout: twocols
----
 
 # *In-situ* cryo-EM
 
-::left::
+::middle::
 
+<div class="mx-20">
 <h3 class="text-center">Expectation</h3>
 
 <img src="/goodsell.jpg" class="mx-auto h-48 rounded-md shadow-lg" />
@@ -39,32 +38,31 @@ layout: twocols
 <h3 class="text-center">Reality</h3>
 
 <img src="/trueem.png" class="mx-auto h-48 rounded-md shadow-lg"/>
- 
-::right::
 
-<h3 class="text-center mt--10">Tomography</h3>
+</div>
 
-<img src="/cryoet.png" class="mx-auto h-32 rounded-md shadow-lg" />
 
-<p class="cite text-right"><a class="cite" href="https://doi.org/10.1038/s41586-022-05255-2" >Xue, L., et al. Nature 610, 205–211 (2022)</a></p>
-
+<div>
 <h3 class="text-center">2D Template Matching</h3>
 
 <p class="text-center">
 
 $\max [($
-<img src="/2dtm_template.png" class="inline h-24" />
+<img src="/2dtm_template.png" class="inline h-36" />
 $\cdot R_{\phi,\theta,\psi})\ast$
-<img src="/2dtm_image.png" class="inline h-24 rounded-md shadow-lg mx-2" />
+<img src="/2dtm_image.png" class="inline h-36 rounded-md shadow-lg mx-2" />
 $]$
 
 </p>
 <p class="text-center">
 
 $=$
-<img src="/2dtm_mip.png" class="mx-auto h-24 rounded-md shadow-lg" />
+<img src="/2dtm_mip.png" class="mx-auto h-36 rounded-md shadow-lg" />
 </p>
-<p class="cite text-right"><a class="cite" href="https://doi.org/10.7554/eLife.25648" >Rickgauer, J.P., et al. eLife 6:e25648 (2017)
+</div>
+
+::bottom::
+<p class="cite text-right mr-20"><a class="cite" href="https://doi.org/10.7554/eLife.25648" >Rickgauer, J.P., et al. eLife 6:e25648 (2017)
 </a></p>
 <!-- /nrs/elferich/bern_backup/ER_HoxB8_96h/Assets/Images/Scaled/CF4-g1_00165_-20.0_165 -->
 <!-- - Solve structures in thei native environment
