@@ -126,7 +126,7 @@ clicks: 3
 
 ::right::
 
-<img src="/ctffind5.png" class="rounded-md shadow-lg"/>
+<img src="/ctffind5.png" class="rounded-md shadow-lg" v-click/>
 
 ::bottom::
 
@@ -178,7 +178,7 @@ result = unblur.run(par)
 </WindowConsole>
 
 ::right::
-<WindowConsole class="rounded-lg shadow-lg object-cover z-10 text-sm">
+<WindowConsole class="rounded-lg shadow-lg object-cover z-10 text-sm" v-click>
 
 ```bash
 > lace_proc import-session /data/elferich/CryoTEM/20230505 \\
@@ -321,7 +321,7 @@ clicks: 2
 clicks:1
 ---
 
-# Translationally inactive class consisten with SERBP1 binding
+# Translationally inactive class consistent with SERBP1 binding
 
 ::middle::
 
@@ -375,7 +375,7 @@ layout: twocols
 
 # Future Directions
 
-- Image CD34+ cells isolated from human umbilical blood as a healthy control
+- Image CD34+ cells isolated from human umbilical cord blood as a healthy control
 - Develop approaches to test for statistical significance of changes in spatial organisation of ribosomal states
 
 
