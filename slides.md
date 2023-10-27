@@ -81,8 +81,8 @@ $=$
 ::middle::
 
 <img src="/init.png" class="inline h-90 rounded-md shadow-lg mx-2" />
-<img src="/approach.png" class="inline h-90 rounded-md shadow-lg mx-2" />
-<img src="/deco_result.jpg" class="inline h-90 rounded-md shadow-lg mx-2" />
+<img src="/approach.png" class="inline h-90 rounded-md shadow-lg mx-2" v-click />
+<img src="/deco_result.jpg" class="inline h-90 rounded-md shadow-lg mx-2" v-click />
 
 <!-- - Lamellae preparation is slow (Do not waste area)
 - Hard to know where rare events are from overview (CLEM)
@@ -95,7 +95,7 @@ $=$
 </a></p>
 
 ---
-clicks: 2
+clicks: 3
 ---
 
 # Data acquisition using DeCo-LACE
@@ -106,11 +106,11 @@ clicks: 2
 
 <img src="/lamella_setup.png" class="rounded-md shadow-lg absolute" v-click="[1, 2]"/>
 
-<img src="/lamella_exposures.png" class="rounded-md shadow-lg" v-click="[2, 3]"/>
+<img src="/lamella_exposures.png" class="rounded-md shadow-lg" v-click="[2, 4]"/>
 
 ::right::
 
-<img src="/Figure_1.svg" />
+<img src="/Figure_1.svg" v-click="[3,4]" />
 
 ::bottom::
 
@@ -131,7 +131,9 @@ clicks: 2
 ::bottom::
 
  <a href="https://github.com/GrigorieffLab/cisTEM/tree/je_ctffind_added_to_combined"><logos-github-icon /> GrigorieffLab/cisTEM/tree/ctffind5</a>
-
+<a class="cite mx-4" href=" https://doi.org/10.1016/j.ultramic.2020.113023" >
+ Tichelaar W., et al. Ultramicroscopy. 216:113023 (2020)
+</a>
 
 ---
 
@@ -151,8 +153,7 @@ clicks: 2
 <img src="/mt_result.png" class="rounded-md shadow-lg h-112 mx-auto" />
 
 ---
-layout: twocols
----
+
 
 # cisTEM 2DTM - Automation with pycistem
 
@@ -180,11 +181,12 @@ result = unblur.run(par)
 <WindowConsole class="rounded-lg shadow-lg object-cover z-10 text-sm">
 
 ```bash
-> lace_proc import-session /data/elferich/CryoTEM/20230505 --pixel-size 0.53 --exp-per-frame 0.8
+> lace_proc import-session /data/elferich/CryoTEM/20230505 \\
+  --pixel-size 0.53 --exp-per-frame 0.8
 
-> lace_proc run-unblur --num-cores 40 --cmd-prefix "srun"
+> lace_proc run-unblur --num-cores 400 --cmd-prefix "srun"
 
-> lace_proc run-ctffind --num-cores 40 --cmd-prefix "srun"
+> lace_proc run-ctffind --num-cores 400 --cmd-prefix "srun"
 
 > lace_proc run-matchtemplate --template "7cpu_60S.mrc"
 ```
@@ -224,54 +226,45 @@ result = unblur.run(par)
 # Brequinar as a treatment for AML
 
 ::left::
-
-<img src="/cell_cover.jpg" class="mx-auto h-96 rounded-md shadow-lg" />
-
-
+<div class="flex-wrap flex">
+<img src="/breq_mechanism.png" class="mx-auto h-48 rounded-md shadow-lg">
+<img src="/cell_cover.jpg" class="mx-auto h-48 rounded-md shadow-lg" />
+<img src="/g1655.png" class="mx-auto h-32 mt-4 rounded-md shadow-lg" />
+</div>
 ::right::
+<div>
+<div class="text-xs" v-click>
 
-
-<img src="/g866.png" class="mx-auto h-32 rounded-md shadow-lg" />
-<img src="/g1655.png" class="mx-auto h-32 rounded-md shadow-lg" />
-
-::bottom::
- <p class="cite"><a class="cite" href="https://doi.org/10.1016/j.cell.2016.08.057">Sykes D.B., et al. Cell 167(1) (2016)
-</a></p>
----
-
-# Data collected 
-
-::middle::
-
-<div class="px-10">
-
-|   |   |
-|---|---|
-| **Cells** | THP1 |
-| **Vitrification** | Plunge-freeze |
-| **Thinning** | TF Acquilos 2 to 150nm |
-| **TEM acquisition** | TF Krios 300keV |
-| **Pixel size** | 0.53 $\AA$ |
-| **Exposure** | 30 $\frac{e}{\AA^2}$ |
-| **2DTM pixel size** | 2 $\AA$ |
-| **2DTM angular sampling** | $2^\circ$ IP, $3^\circ$ OP |
+|   |   |    |   |
+|---|---|---|---|
+| **Cells** | THP1 | **Vitrification** | Plunge-freeze |
+| **Thinning** | cryo-FIB 150nm |  **TEM acquisition** | Krios 300keV |
+| **Pixel size** | 1.06 Å | **Exposure** | 30 $\frac{e}{Å^2}$ |
+| **2DTM pixel size** | 2 Å | **2DTM angular sampling** | 2° IP, 3° OP |
 
 </div>
-
-<div class="mx-5">
+<div class="text-xs mt-20" v-click>
 
 |         | Control           | 24h brequinar  | 48h brequinar | **Total** |
 | ------------- |-------------:| -----:| ---:| ---:|
 | # Lamellae      | 35 | 15 | 31| 81 | 
 | # Micrographs      | 15,612  | 6,423 | 14,008 | 36,043 |
 | # 60S Matches | 210,780      | 71,469 | 108,108 | 390,357 |
-| 60S Matches / micrograph | 13.5 | 11.1 | 7.7 | 10.8 |
+| 60S Matches / Micrograph | 13.5 | 11.1 | 7.7 | 10.8 |
 
 </div>
+</div>
+::bottom::
 
+ <p class="cite">
+ <a class="cite" href="https://doi.org/10.1111/eci.13366">
+ Coelho, A.R., et al. EJCI (2020)
+ </a>
+ <a class="cite" href="https://doi.org/10.1016/j.cell.2016.08.057">Sykes D.B., et al. Cell 167(1) (2016)
+</a></p>
 ---
 
-# cisTEM - Reconstructed Matches
+# Reconstruction from 2DTM detections
 
 ::middle::
 
@@ -280,7 +273,7 @@ result = unblur.run(par)
 
 ---
 
-# cisTEM - Template Bias?
+# Maps from 2DTM detections differ from template
 
 ::left::
 
@@ -298,7 +291,7 @@ result = unblur.run(par)
 layout: twocols
 ---
 
-# cisTEM - Classification
+# Classification of 2DTM detections
 
 ::left::
 
@@ -328,7 +321,7 @@ clicks: 2
 clicks:1
 ---
 
-# SERBP1 is bound to EF2 inactive class
+# Translationally inactive class consisten with SERBP1 binding
 
 ::middle::
 
@@ -352,47 +345,38 @@ clicks:1
 layout: twocols
 ---
 
-# Degradation in autophagosomes?
+# Ribosome degradation by autophagocytosis?
 
 ::left::
 
 <h3> Brequinar treatment </h3>
 
-<div class="grid grid-cols-2 gap-4">
 
-<img src="/render001.png" class="rounded-md shadow-lg" />
-<img src="/render005.png" class="rounded-md shadow-lg" />
-<img src="/render004.png" class="rounded-md shadow-lg" />
-<img src="/render003.png" class="rounded-md shadow-lg" />
-</div>
+<img src="/br_render.png" class="rounded-md shadow-lg h-96" />
 
 ::right::
 
 <h3> Control </h3>
 
-<div class="grid grid-cols-2 gap-4">
 
-<img src="/crender001.png" class="rounded-md shadow-lg" />
-<img src="/crender002.png" class="rounded-md shadow-lg" />
-<img src="/crender003.png" class="rounded-md shadow-lg" />
-<img src="/crender004.png" class="rounded-md shadow-lg" />
-</div>
+<img src="/C_render.png" class="rounded-md shadow-lg h-96" />
+
 
 
 ---
 
-# Summary future directions
+# Summary 
 
 - Brequinar treatment changes ribosome levels, but does not appear to change the fraction of actively translating ribosomes
 - THP1 cells contain a surprisingly high fraction of translationally inactive ribosomes
-- Brequinar treatment appears to induce formation of ribosome-containing phagocytic structures
+- Brequinar treatment appears to induce formation of ribosome-containing phagosome-like structures
 
 <div class="mt-5" />
 
 # Future Directions
 
-- We are planning to compare these results to CD34+ cells isolated from human umbilical blood
-- We are working on developing approaches to test for statistically significant changes in spatial orientation of ribosomal states
+- Image CD34+ cells isolated from human umbilical blood as a healthy control
+- Develop approaches to test for statistical significance of changes in spatial organisation of ribosomal states
 
 
 ---
