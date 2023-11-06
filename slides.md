@@ -19,7 +19,7 @@ mdc: true
 layout: cover
 ---
 
-# Workflows for *In-Situ* Structural Biology <br /> Using DeCo-LACE and *cis*TEM
+# *In-situ* and *in-vitro* structure determination using 2DTM in *cis*TEM
 
 Johannes Elferich, Grigorieff Lab
 
@@ -64,57 +64,48 @@ $=$
 ::bottom::
 <p class="cite text-right mr-20"><a class="cite" href="https://doi.org/10.7554/eLife.25648" >Rickgauer, J.P., et al. eLife 6:e25648 (2017)
 </a></p>
-<!-- /nrs/elferich/bern_backup/ER_HoxB8_96h/Assets/Images/Scaled/CF4-g1_00165_-20.0_165 -->
-<!-- - Solve structures in thei native environment
-- Quantify differences in conformational landscapes
-- Quantify differences in complex formation
-- Main problem is finding target
-- Tomography vs 2DTM
-- Data acquisition speed is crucial
--->
 ---
 
-
-
-# Defocus Corrected Large-Area Cryo-EM (DeCo-LACE)
+# 2DTM for in-situ
 
 ::middle::
 
-<img src="/init.png" class="inline h-90 rounded-md shadow-lg mx-2" />
-<img src="/approach.png" class="inline h-90 rounded-md shadow-lg mx-2" v-click />
-<img src="/deco_result.jpg" class="inline h-90 rounded-md shadow-lg mx-2" v-click />
+<div class="mx-auto">
+<img src="/vis_01.png" class="rounded-md shadow-lg h-112 mx-auto absolute"  />
 
-<!-- - Lamellae preparation is slow (Do not waste area)
-- Hard to know where rare events are from overview (CLEM)
-- Approach: Image everything as fast as possible
--->
+<img src="/vis_02.png" class="rounded-md shadow-lg h-112 mx-auto absolute" v-click/>
+<img src="/vis_03.png" class="rounded-md shadow-lg h-112 mx-auto absolute" v-click/>
 
-::bottom::
+<img src="/vis_04.png" class="rounded-md shadow-lg h-112 mx-auto absolute" v-click/>
+<img src="/vis_04.png" class="rounded-md shadow-lg h-112 mx-auto" v-after/>
 
-<p class="cite"><a class="cite" href=" https://doi.org/10.7554/eLife.80980" >Elferich, J., et al. eLife 11:e80980 (2022)
-</a></p>
-
----
-clicks: 3
+</div>
 ---
 
-# Data acquisition using DeCo-LACE
+# What else could 2DTM used for
 
-::left::
+- Single particle
+  - Maybe fewer images needed
+  - Direct selection of "good" particles
+  - Start out with good euler angles
+  - Sample does not to have to be pure
+- Lysate vs purified sample
+  - Minimize "time to grid"
+  - Keep more interaction partners around
+  - Purify organelles instead of proteins
 
-<img src="/lamella.png" class="rounded-md shadow-lg absolute" v-click="[0, 1]" />
+---
 
-<img src="/lamella_setup.png" class="rounded-md shadow-lg absolute" v-click="[1, 2]"/>
+# Today - Demo using ryanodine receptor
 
-<img src="/lamella_exposures.png" class="rounded-md shadow-lg" v-click="[2, 4]"/>
+---
+layout: iframe
 
-::right::
+# the web page source
+url: http://localhost:3000/webgl-ctf/image_abb
+---
 
-<img src="/Figure_1.svg" v-click="[3,4]" />
 
-::bottom::
-
- <a href="https://github.com/jojoelfe/decolace"><logos-github-icon /> jojoelfe/decolace</a>
 
 ---
 
